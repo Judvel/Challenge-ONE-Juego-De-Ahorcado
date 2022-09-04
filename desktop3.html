@@ -29,51 +29,17 @@
         padding: 24px 16px;
     }
     
-    main {
+    .main-guess-button {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        bottom: 163px;
     }
     
-    .main-word-create {
-        width: 332px;
-    }
-    
-    .main-word-create-button {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    #main-word-create-input {
-        margin-bottom: 251px;
-        margin-top: 100px;
-        width: 100%;
-        height: 48px;
-        border: none;
-        background: #F3F5FC;
-        color: #0A3871;
-        font-family: 'Inter', sans-serif;
-        font-style: normal;
-        font-size: 32px;
-        outline: none;
-    }
-    
-    #main-word-create-input::placeholder {
-        color: #0A3871;
-        font-family: 'Inter', sans-serif;
-        font-style: normal;
-        font-size: 32px;
-    }
-    
-    .fa-exclamation-circle {
-        font-weight: 400;
-        font-size: 12px;
-        color: #495057;
-        margin-bottom: 16px;
-    }
-    
-    .button-save {
+    .button-new-game {
         width: 332px;
         padding: 24px;
         border-radius: 24px;
@@ -83,7 +49,7 @@
         color: white;
     }
     
-    .button-cancel {
+    .button-give-up {
         width: 332px;
         height: 67px;
         margin-top: 24px;
@@ -149,19 +115,12 @@
     }
     
     @media (min-width: 768px) {
-        .main-word-create {
-            width: 668px;
-        }
-        .fa-exclamation-circle {
-            position: absolute;
-            bottom: 246px;
-        }
-        .main-word-create-button {
+        .main-guess-button {
             flex-direction: row;
             position: absolute;
             bottom: 163px;
         }
-        .button-cancel {
+        .button-give-up {
             margin-left: 24px;
             margin-top: 0;
         }
@@ -181,17 +140,11 @@
     </header>
 
     <main>
+        <section class="main-guess">
 
-        <section class="main-word-create">
-            <form>
-                <input type="text" id="main-word-create-input" placeholder="Ingrese una Palabra">
-            </form>
-
-            <i class="fa fa-exclamation-circle"> Max de 8 letras</i>
-
-            <div class="main-word-create-button">
-                <button class="button-save">Guardar y Empezar</button>
-                <button class="button-cancel">Cancelar</button>
+            <div class="main-guess-button">
+                <button class="button-new-game">Nuevo Juego</button>
+                <button class="button-give-up">Desistir</button>
             </div>
         </section>
     </main>

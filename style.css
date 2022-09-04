@@ -11,7 +11,7 @@ body {
 
 header {
     width: 100%;
-    padding: 40px 84px;
+    padding: 24px 16px;
 }
 
 main {
@@ -37,7 +37,7 @@ main {
     height: 67px;
     border-radius: 24px;
     border: 1px solid #0A3871;
-    margin-top: 38px;
+    margin-top: 16px;
     background: #F3F5FC;
     color: #0A3871;
 }
@@ -95,4 +95,13 @@ footer {
 .linkedin {
     width: 30px;
     height: 30px;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 40px;
+    }
+    .button-new-word {
+        margin-top: 38px;
+    }
 }
