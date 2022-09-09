@@ -19,37 +19,41 @@
     </header>
 
     <main>
-        <div>
-            <button class="button-start">Iniciar Juego</button>
-        </div>
-        <div>
-            <button class="button-new-word">Agregar Nueva Palabra</button>
+        <section class="main-button-container">
+            <button class="main-button--start">Iniciar juego</button>
+            <button class="main-button--add">Agregar nueva palabra</button>
+        </section>
 
-        </div>
+        <section class="main-add-container inactive">
+            <input type="text" placeholder="Ingrese una Palabra">
+            <section class="main-add--button">
+                <button class="button-add--save button-save-start">Guardar y empezar</button>
+                <button class="button-add--cancel">Cancelar</button>
+            </section>
+        </section>
+
+        <section class="main-game-container inactive">
+            <canvas id="game"></canvas>
+            <section class="main-add--button">
+                <button class="button-add--save">Nuevo juego</button>
+                <button class="button-add--cancel button-add--cancel-game">Desistir</button>
+            </section>
+        </section>
     </main>
 
     <footer>
-        <div class="logo-footer">
-            <img src="./img/alura-logo.1647533644.svg" alt="Logo de Alura Latam">
-        </div>
-
-        <div class="datos-footer">
-            <p>Julio Diaz Velásquez</p>
+        <section class="left">
+            <img src="./img/alura-logo.1647533644.svg" alt="Logo de Alura">
+        </section>
+        <section class="right">
             <ul>
-                <li>
-                    <a href=""><img src="./img/github.png" alt="" class="github"></a>
-                </li>
-                <li>
-                    <a href=""><img src="./img/gmail.png" alt="" class="gmail"></a>
-                </li>
-                <li>
-                    <a href=""><img src="./img/linkedin.png" alt="" class="linkedin"></a>
-                </li>
+                <li>Linkedin</li>
+                <li>GitHub</li>
+                <li>Correo</li>
             </ul>
-        </div>
-
+        </section>
     </footer>
-
 </body>
 
 </html>
+<script src="./main.js"></script>

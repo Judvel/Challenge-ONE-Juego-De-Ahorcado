@@ -1,107 +1,140 @@
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
-body {
-    background: #F3F5FC;
+html {
+    font-size: 62.5%;
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background-color: #F3F5FC;
 }
 
 header {
-    width: 100%;
     padding: 24px 16px;
 }
 
 main {
+    width: 100%;
+    height: auto;
+}
+
+.main-button-container {
+    width: 90%;
+    max-width: 317px;
+    margin: 170px auto;
     display: flex;
-    height: 70vh;
     flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
 }
 
-.button-start {
-    width: 317px;
-    padding: 24px;
-    border-radius: 24px;
-    border: none;
+.main-button--start {
+    width: 100%;
+    max-width: 317px;
+    min-width: 235px;
     height: 105px;
-    background: #0A3871;
+    padding: 24px;
+    background-color: #0A3871;
     color: white;
+    border: none;
+    border-radius: 24px;
 }
 
-.button-new-word {
-    width: 280px;
+.main-button--add {
+    width: 100%;
+    max-width: 280px;
+    min-width: 235px;
     height: 67px;
-    border-radius: 24px;
-    border: 1px solid #0A3871;
     margin-top: 16px;
-    background: #F3F5FC;
+    padding: 24px;
+    background-color: #F3F5FC;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+}
+
+.main-add-container {
+    text-align: center;
+}
+
+.main-add-container input {
+    width: 90%;
+    height: 48px;
+    font-size: 3.2rem;
+    align-self: center;
+    margin-bottom: 250px;
+    color: #0A3871;
+    border: none;
+    outline: none;
+    background-color: #F3F5FC;
+}
+
+.main-add-container input::placeholder {
     color: #0A3871;
 }
 
+.main-add--button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-add--save,
+.button-add--cancel {
+    width: 90%;
+    max-width: 332px;
+    min-width: 230px;
+    height: 67px;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 24px;
+}
+
+.button-add--save {
+    border: none;
+    background-color: #0A3871;
+    color: white;
+}
+
+.button-add--cancel {
+    background-color: #F3F5FC;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
 footer {
+    display: flex;
     width: 100%;
-    position: absolute;
-    display: grid;
-    bottom: 0;
-    background: #0A3871;
-    grid-template-columns: 1fr 1fr;
+    height: 150px;
+    background-color: #0A3871;
+}
+
+footer section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
     align-items: center;
-    font-size: 13px;
 }
 
-.logo-footer {
-    padding: 10px;
-}
-
-.logo-footer img {
+footer .left img {
     width: 100px;
     height: 100px;
-    justify-self: center;
 }
 
-.datos-footer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    justify-self: center;
-}
-
-.datos-footer ul {
-    display: flex;
+footer .right ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
     list-style: none;
-    margin-top: 10px;
 }
 
-.datos-footer ul li {
-    margin-right: 10px;
+.right li {
+    margin: 10px 0;
+    color: white;
 }
 
-.github {
-    width: 30px;
-    height: 30px;
-}
-
-.gmail {
-    width: 30px;
-    height: 30px;
-}
-
-.linkedin {
-    width: 30px;
-    height: 30px;
-}
-
-@media (min-width: 768px) {
-    header {
-        padding: 40px;
-    }
-    .button-new-word {
-        margin-top: 38px;
-    }
+.inactive {
+    display: none;
 }
