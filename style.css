@@ -1,3 +1,10 @@
+:root {
+    --warm-black: #201E1C;
+    --warm-black1: #282623;
+    --color-button1: linear-gradient(180deg, #a405ee 16.34%, #059ff8 100%);
+    --color-button2: linear-gradient(180deg, #ffde00 16.34%, #fd5a00 100%);
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -17,10 +24,18 @@ body {
     height: 100%;
     min-height: 100vh;
     justify-content: space-between;
+    background-color: var(--warm-black);
 }
 
 header {
     padding: 24px 16px;
+    text-align: center;
+    background: var(--warm-black1);
+}
+
+header h1 {
+    font-size: 2.4rem;
+    color: white;
 }
 
 main {
@@ -48,7 +63,7 @@ main {
     min-width: 235px;
     height: 105px;
     padding: 24px;
-    background-color: #0A3871;
+    background: var(--color-button1);
     color: white;
     border: none;
     border-radius: 24px;
@@ -61,7 +76,7 @@ main {
     height: 67px;
     margin-top: 16px;
     padding: 24px;
-    background-color: #F3F5FC;
+    background: var(--color-button2);
     color: #0A3871;
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -111,12 +126,12 @@ main {
 
 .button-add--save {
     border: none;
-    background-color: #0A3871;
+    background: var(--color-button1);
     color: white;
 }
 
 .button-add--cancel {
-    background-color: #F3F5FC;
+    background: var(--color-button2);
     color: #0A3871;
     border: 1px solid #0A3871;
 }
@@ -132,13 +147,15 @@ main {
 
 #game {
     /* max-width: 500px; */
+    margin-top: 20px;
     align-self: center;
     /* flex-grow: 1; */
     /* margin: 0 auto; */
-    background: #F3F5FC;
+    background: var(--warm-black);
 }
 
 .main-game--winner {
+    margin-top: 20px;
     text-align: center;
     align-items: center;
 }
@@ -152,6 +169,7 @@ main {
     font-size: 1.8rem;
     font-weight: bold;
     margin-top: 20px;
+    color: white;
 }
 
 ul {
@@ -169,31 +187,29 @@ footer {
     display: flex;
     width: 100%;
     height: 150px;
-    background-color: #0A3871;
+    background-color: var(--warm-black1);
 }
 
 footer section {
     display: flex;
-    width: 50%;
+    width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-footer .left img {
-    width: 100px;
-    height: 100px;
-}
-
-footer .right ul {
-    font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 1.8rem;
+footer ul {
     list-style: none;
+    display: flex;
+    width: 20%;
+    max-width: 240px;
+    min-width: 170px;
+    justify-content: space-around;
 }
 
-.right li {
-    margin: 10px 0;
-    color: white;
+footer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
 }
 
 .inactive {
