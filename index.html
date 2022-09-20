@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./tablet.css" media="(min-width: 768px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -25,7 +26,7 @@
         </section>
 
         <section class="main-add-container inactive">
-            <input type="text" placeholder="Ingrese una Palabra">
+            <input id="main-add--input" type="text" placeholder="Ingrese una Palabra">
             <section class="main-add--button">
                 <button class="button-add--save button-save-start">Guardar y empezar</button>
                 <button class="button-add--cancel">Cancelar</button>
@@ -34,11 +35,21 @@
 
         <section class="main-game-container inactive">
             <canvas id="game"></canvas>
+            <section class="main-game--winner inactive">
+                <img src="./img/copa-de-oro.png" alt="Trofeo">
+                <h1>Felicitaciones, Has Ganado!</h1>
+            </section>
+            <section class="main-game--looser main-game--winner inactive">
+                <img src="./img/perdedor.png" alt="Trofeo">
+                <h1>Has perdido :(, pero puedes seguir intentandolo</h1>
+            </section>
+
             <section class="main-add--button">
-                <button class="button-add--save">Nuevo juego</button>
+                <button class="button-add--save button-add--new-game">Nuevo juego</button>
                 <button class="button-add--cancel button-add--cancel-game">Desistir</button>
             </section>
         </section>
+
     </main>
 
     <footer>
@@ -53,7 +64,10 @@
             </ul>
         </section>
     </footer>
+
+    <script src="./main.js"></script>
+    <script src="./mainV2.js"></script>
+    <!-- <script src="./canvas.js"></script> -->
 </body>
 
 </html>
-<script src="./main.js"></script>

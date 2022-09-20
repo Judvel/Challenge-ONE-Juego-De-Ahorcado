@@ -11,23 +11,35 @@ html {
     background-color: #F3F5FC;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
 header {
     padding: 24px 16px;
 }
 
 main {
+    display: flex;
     width: 100%;
-    height: auto;
+    /* height: auto; */
+    height: 100%;
+    flex-grow: 1;
+    /* min-height: 100vh; */
 }
 
 .main-button-container {
     width: 90%;
     max-width: 317px;
-    margin: 170px auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .main-button--start {
@@ -56,15 +68,20 @@ main {
 }
 
 .main-add-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
     text-align: center;
+    width: 790px;
 }
 
 .main-add-container input {
     width: 90%;
+    max-width: 320px;
     height: 48px;
     font-size: 3.2rem;
-    align-self: center;
-    margin-bottom: 250px;
+    margin: 40px 10px 10px;
     color: #0A3871;
     border: none;
     outline: none;
@@ -102,6 +119,50 @@ main {
     background-color: #F3F5FC;
     color: #0A3871;
     border: 1px solid #0A3871;
+}
+
+.main-game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 790px;
+    margin: 0 auto;
+}
+
+#game {
+    /* max-width: 500px; */
+    align-self: center;
+    /* flex-grow: 1; */
+    /* margin: 0 auto; */
+    background: #F3F5FC;
+}
+
+.main-game--winner {
+    text-align: center;
+    align-items: center;
+}
+
+.main-game--winner img {
+    width: 70%;
+    max-width: 350px;
+}
+
+.main-game--winner h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+#hold ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 2.4rem;
 }
 
 footer {
