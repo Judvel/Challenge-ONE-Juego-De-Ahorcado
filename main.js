@@ -37,49 +37,49 @@ function startGame() {
         game.stroke();
     }
 
-    function draw($pathFromx, $pathFromy, $pathTox, $pathToy) {
+    function drawHangman(fromX, fromY, toX, toY) {
 
-        game.moveTo($pathFromx, $pathFromy);
-        game.lineTo($pathTox, $pathToy);
+        game.moveTo(fromX, fromY);
+        game.lineTo(toX, toY);
         game.stroke();
     }
 
-    function frame1() {
-        draw(70, 150, 225, 150);
+    function line1() {
+        drawHangman(Number(canvasSize / 2) - 60, 150, Number(canvasSize / 2), 150);
     };
 
-    function frame2() {
-        draw(Number(canvasSize / 2) - 50, 5, Number(canvasSize / 2) - 50, 150);
+    function line2() {
+        drawHangman(Number(canvasSize / 2) - 50, 5, Number(canvasSize / 2) - 50, 150);
     };
 
-    function frame3() {
-        draw(Number(canvasSize / 2) - 50, 5, Number(canvasSize / 2), 5);
+    function line3() {
+        drawHangman(Number(canvasSize / 2) - 50, 5, Number(canvasSize / 2), 5);
     };
 
-    function frame4() {
-        draw(Number(canvasSize / 2), 5, Number(canvasSize / 2), 15);
+    function line4() {
+        drawHangman(Number(canvasSize / 2), 5, Number(canvasSize / 2), 15);
     };
 
     function torso() {
-        draw(Number(canvasSize / 2), 36, Number(canvasSize / 2), 70);
+        drawHangman(Number(canvasSize / 2), 36, Number(canvasSize / 2), 70);
     };
 
     function rightArm() {
-        draw(Number(canvasSize / 2), 40, Number(canvasSize / 2) - 15, 50);
+        drawHangman(Number(canvasSize / 2), 40, Number(canvasSize / 2) - 15, 50);
     };
 
     function leftArm() {
-        draw(Number(canvasSize / 2), 40, Number(canvasSize / 2) + 15, 50);
+        drawHangman(Number(canvasSize / 2), 40, Number(canvasSize / 2) + 15, 50);
     };
 
     function rightLeg() {
-        draw(Number(canvasSize / 2), 70, Number(canvasSize / 2) - 15, 100);
+        drawHangman(Number(canvasSize / 2), 70, Number(canvasSize / 2) - 15, 100);
     };
 
     function leftLeg() {
-        draw(Number(canvasSize / 2), 70, Number(canvasSize / 2) + 15, 100);
+        drawHangman(Number(canvasSize / 2), 70, Number(canvasSize / 2) + 15, 100);
     };
-    drawArray = [rightLeg, leftLeg, rightArm, leftArm, torso, head, frame4, frame3, frame2, frame1];
+    drawArray = [line1, line2, line3, line4, head, torso, leftArm, rightArm, leftLeg, rightLeg];
     elementsizeH = Number(canvasSize / 10);
 }
 
