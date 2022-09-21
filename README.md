@@ -8,7 +8,7 @@
 <p style="text-align: justify; margin-right: 10px"> Hangman is a guessing game where one player has to think a word, phrase or sentence and another player tries to guess it by suggesting letters with a set number of tries.
 The word to guess is represented by a row of dashes representing each letter of the word. If the player suggests a letter which occurs in the word, the other player writes it in all correct positions. If the suggested letter is not occur in the word, the other player draws one element of a hanged stick figure as a tally mark.</p>
 
-<img src="./img/3269914.png" title=HomePage alt="Home Page" style= "background:#FFFFFF; width:200px; height:200px; align-self:center">
+<img src="./img/3269914.png" title=Hangman-Game alt="Hangman-Game" style= "background-color:#FFFFFF; width:200px; height:200px; align-self:center">
 </div>
 
 ## About of the project.
